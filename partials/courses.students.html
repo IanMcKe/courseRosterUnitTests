@@ -1,7 +1,10 @@
 <div ng-show="course.students.length">
-  <h2>Student List for {{ course.name }}</h2>
+  <h2>Student List for   <span sample-course course-name="{{courseName}}"></span></h2>
+  <input type="text" ng-model="alertMessage" placeholder="alert">
+  <alert-user alert="alertUser(alertMessage)"></alert-user>
+
   <ul>
-    <li ng-repeat="item in course.students">
+    <li ng-repeat="item in course.students" debug>
       {{item.name}}
     </li>
   </ul>
