@@ -2,7 +2,7 @@
 
 ##### A website that allows users to create a student roster, delete and update individual items, and search through the list. A Field Strip Permission Slip feature is added to show if the students have their permission slip turned in. (9/22/15)
 
-#### By Logan Wu & Ian McKenney & Casey Heitz
+#### Ian McKenney
 
 ## Description
 Two controllers ```StudentsController.js``` and ```FieldTripsController.js``` and one factory ```StudentsFactory.js``` are created for the project.
@@ -20,7 +20,7 @@ HTML, CSS, Bootstrap, JavaScript, AngularJS
 
 ### Legal
 
-Copyright (c) 2015 **Logan Wu & Ian McKenney & Casey Heitz**
+Copyright (c) 2015 **Ian McKenney**
 
 This software is licensed under the MIT license.
 
