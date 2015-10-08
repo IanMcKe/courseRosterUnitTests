@@ -4,6 +4,8 @@
 ## Description
 Two controllers ```StudentsController.js``` and ```CoursesController.js``` and two factories ```StudentsFactory.js``` and ```UtilitiesFactory.js``` are created for the project.
 
+I created an ```appTest.js``` file which is an exact copy of the ```app.js``` file with the ngMock dependency.  Having the ngMock dependency in the index.html file can cause issues with using your website.  
+
 ##### Before beginning testing be sure to go through the [installation](http://karma-runner.github.io/0.13/intro/installation.html) and then the [configuration](http://karma-runner.github.io/0.13/intro/configuration.html) of Karma.  I left ```my.conf.js``` in the repo for reference but try deleting it and running karma init to make your own.
 
 A website that allows users to create a course roster by adding courses.  Students can then be added to each course.  Tests have been added for the following:
