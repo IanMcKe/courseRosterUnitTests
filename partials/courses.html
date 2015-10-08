@@ -1,5 +1,5 @@
 <div ng-show="courses.length">
-  <h1>Here are all of your courses: <span sampleCourse></span></h1>
+  <h1>Here are all of your courses: <span sample-course></span></h1>
   <ul>
     <li ng-repeat="item in courses">
       <a ui-sref="courses.students( { courseId: item.id })">{{ item.name }}</a>

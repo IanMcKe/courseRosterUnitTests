@@ -1,14 +1,19 @@
 courseRoster.directive('sampleCourse', function() {
   return {
-    scope: {
-      courseName:"@"
-    },
-    // link: function(scope, element, attrs) {
-    //   scope.courseName = attrs.sampleCourse;
-    // },
-    template: "<div debug>{{courseName}}</div>"
 
-  }
+    restrict:"E",
+    replace: true,
+    template: "<span>Sailing</span>"
+
+  };
+});
+
+courseRoster.directive('aGreatEye', function () {
+    return {
+        restrict: 'E',
+        replace: true,
+        template: '<h1>lidless, wreathed in flame, {{1 + 1}} times</h1>'
+    };
 });
 
 courseRoster.directive('alertUser', function() {

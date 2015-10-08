@@ -5,7 +5,7 @@ courseRoster.controller('StudentsCtrl', function StudentsCtrl($scope, $statePara
     $scope.studentName = null;
   };
 
-  $scope.courseName = $scope.course.name;
+  // $scope.courseName = $scope.course.name;
 
   $scope.alertUser = function(alertMessage) {
     alert(alertMessage);
