@@ -1,4 +1,3 @@
-//////////////////////
 describe("sampleCourse Directive test", function() {
   var element, scope;
 
@@ -20,9 +19,7 @@ describe("sampleCourse Directive test", function() {
     expect(element.text()).toBe("Sailing");
   });
 });
-////////////////
 
-///////////////////
 describe('aGreatEye directive test', function() {
   var element, scope;
 
@@ -45,7 +42,6 @@ describe('aGreatEye directive test', function() {
   });
 });
 
-//////////////////////////////////////
 describe('CoursesController test', function() {
   beforeEach(module('courseRoster'));
 
@@ -63,9 +59,7 @@ describe('CoursesController test', function() {
     expect($scope.course.name).toBe("PHP/JavaScript/Drupal");
   })
 });
-/////////////////////////////////////////
 
-////////////////////////////////////////
 describe('StudentsController test', function() {
   beforeEach(module('courseRoster'));
 
@@ -77,7 +71,7 @@ describe('StudentsController test', function() {
 
   it('adds a student using the method .addStudent()', function() {
     var course = { name: "PHP/JavaScript/Drupal", id: 1, students: [] };
-    var $scope = {}
+    var $scope = {};
     var controller = $controller('StudentsCtrl', { $scope: $scope });
     $scope.course = course;
     $scope.studentName = "Ian";
@@ -86,9 +80,25 @@ describe('StudentsController test', function() {
     expect($scope.course.students[0].name).toBe("Ian");
   });
 });
-//////////////////////////////////////
+
 describe('CoursesFactory test', function() {
   beforeEach(module('courseRoster'));
 
-  var
+  var CoursesFactory;
+
+  beforeEach(inject(function(_CoursesFactory_) {
+    CoursesFactory = _CoursesFactory_;
+  }));
+
+  it('should have an .addCourse()', function() {
+    expect(angular.isFunction(CoursesFactory.addCourse)).toBe(true);
+  });
+
+  it('adds a course using the method .addCourse()', function() {
+    var course = { name: "PHP/JavaScript/Drupal", id: 1, students: [] };
+    var $scope = {};
+    CoursesFactory.courseName = "PHP/JavaScript/Drupal";
+    CoursesFactory.addCourse();
+    expect(CoursesFactory.courses[0].name).toBe("PHP/JavaScript/Drupal");
+  });
 });

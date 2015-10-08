@@ -4,6 +4,8 @@
 ## Description
 Two controllers ```StudentsController.js``` and ```CoursesController.js``` and two factories ```StudentsFactory.js``` and ```UtilitiesFactory.js``` are created for the project.
 
+##### Before beginning testing be sure to go through the [installation](http://karma-runner.github.io/0.13/intro/installation.html) and then the [configuration](http://karma-runner.github.io/0.13/config/configuration-file.html) of Karma.  I left ```my.conf.js``` in the repo for reference but try deleting it and running karma init to make your own.
+
 A website that allows users to create a course roster by adding courses.  Students can then be added to each course.  Tests have been added for the following:
 
 * sampleCourse directive
@@ -15,7 +17,7 @@ Karma makes the basic my.conf.js for you when you enter "karma init" in your bro
 
 ![my.conf.js files section](https://github.com/IanMcKe/courseRosterUnitTests/blob/master/my.conf.js_files.JPG)
 
-##### Note that the order is important:  ```angular.js``` needs to come first and ```angular-mocks.js``` needs to come second (get ```angular-mocks.js``` [here](https://docs.angularjs.org/api/ngMock)).  After those you will need to add in ```app.js``` and finally your controllers/directives/services/tests etc.
+##### Note that the order is important:  ```angular.js``` needs to come first and ```angular-mocks.js``` needs to come afterward (get ```angular-mocks.js``` [here](https://docs.angularjs.org/api/ngMock)).  After those you will need to add in ```app.js``` and finally your controllers/directives/services/tests etc.
 
 ## Setup
 
@@ -31,7 +33,7 @@ python -m http.server 8000
 
 ## Technologies Used
 
-HTML, CSS, Bootstrap, JavaScript, AngularJS, Karma
+HTML, CSS, Bootstrap, JavaScript, AngularJS, Karma, Jasmine
 
 ### Legal
 
