@@ -12,8 +12,11 @@ A website that allows users to create a course roster by adding courses.  Studen
 
 * sampleCourse directive
 * aGreatEye directive (an example from the AngularJS website)
+* changeClass directive
 * CoursesController
 * StudentsController
+* CoursesFactory
+* UtilitiesFactory
 
 Karma makes the basic ```my.conf.js``` for you when you enter "karma init" in your browser, but you will need to add files to the "files" section of my.conf.js in order for Karma to run properly.  Here's how my files section of ```my.conf.js``` looked after I got done:
 

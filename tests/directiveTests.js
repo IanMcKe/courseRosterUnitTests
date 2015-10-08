@@ -42,15 +42,24 @@ describe('aGreatEye directive test', function() {
   });
 });
 
-describe('alertUser Directive test', function() {
-  var element, scope;
-
-  beforeEach(module('courseRoster'));
-
-  beforeEach(inject(function($compile, $rootScope) {
-    element = angular.element("<alert-user alert='alertUser(alertMessage)'></alert-user>")
-  }))
-})
+// describe('alertUser Directive test', function() {
+//   var element, scope;
+//
+//   beforeEach(module('courseRoster'));
+//
+//   beforeEach(inject(function($compile, $rootScope) {
+//     element = angular.element("<alert-user alert='alertUser(alertMessage)'></alert-user>");
+//     scope = $rootScope.$new();
+//     $compile(element)(scope);
+//     scope.$digest();
+//   }));
+//
+//   it('alerts user when button is clicked', function() {
+//     scope.alertMessage("alert");
+//     element.triggerHandler('click');
+//     expect()
+//   });
+// });
 
 describe('changeClass Directive test', function() {
   var element, scope;
