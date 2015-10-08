@@ -1,22 +1,37 @@
-# Student Roster with Field Trip Permission Slip Option with Routing
-
-##### A website that allows users to create a student roster, delete and update individual items, and search through the list. A Field Strip Permission Slip feature is added to show if the students have their permission slip turned in. (9/22/15)
-
+# Course Roster with Karma Unit testing
 #### Ian McKenney
 
 ## Description
-Two controllers ```StudentsController.js``` and ```FieldTripsController.js``` and one factory ```StudentsFactory.js``` are created for the project.
+Two controllers ```StudentsController.js``` and ```CoursesController.js``` and one factory ```StudentsFactory.js``` are created for the project.
 
-Built using MVC.
+A website that allows users to create a course roster by adding courses.  Students can then be added to each course.  Tests have been added for the following:
+
+* sampleCourse directive
+* aGreatEye directive (an example from the AngularJS website)
+* CoursesController
+* StudentsController
+
+Karma makes the basic my.conf.js for you when you enter "karma init" in your browser, but you will need to add files to the "files" section of my.conf.js in order for Karma to run properly.  Here's how my files section of my.conf.js looked after I got done:
+
+![my.conf.js files section](my.conf.js_files.jpg)
+
+##### Note that the order is important:  ```angular.js``` needs to come first and ```angular-mocks.js``` needs to come second (get ```angular-mocks.js``` [here](https://docs.angularjs.org/api/ngMock)).  After those you will need to add in ```app.js``` and finally your controllers/directives/services/tests etc.
 
 ## Setup
 
 * Clone the project using the link provided on Github in the Terminal.
-* Open ```index.html``` from the main project folder.
+* Download Python and enter the following line in the Terminal while in the project directory:
+```console
+python -m SimpleHTTPServer
+```
+or if you have python 3.x run:
+```console
+python -m http.server 8000
+```
 
 ## Technologies Used
 
-HTML, CSS, Bootstrap, JavaScript, AngularJS
+HTML, CSS, Bootstrap, JavaScript, AngularJS, Karma
 
 ### Legal
 
