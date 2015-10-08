@@ -1,21 +1,38 @@
-describe('CoursesFactory test', function() {
+describe('CoursesController test', function() {
   beforeEach(module('courseRoster'));
 
-  var CoursesFactory;
+  var $controller;
 
-  beforeEach(inject(function(_CoursesFactory_) {
-    CoursesFactory = _CoursesFactory_;
+  beforeEach(inject(function(_$controller_) {
+    $controller = _$controller_;
   }));
 
-  it('should have an .addCourse() method', function() {
-    expect(angular.isFunction(CoursesFactory.addCourse)).toBe(true);
-  });
-
-  it('adds a course using the method .addCourse()', function() {
+  it('assigns a course to CoursesController', function() {
     var course = { name: "PHP/JavaScript/Drupal", id: 1, students: [] };
     var $scope = {};
-    CoursesFactory.courseName = "PHP/JavaScript/Drupal";
-    CoursesFactory.addCourse();
-    expect(CoursesFactory.courses[0].name).toBe("PHP/JavaScript/Drupal");
+    var controller = $controller('CoursesCtrl', { $scope: $scope });
+    $scope.course = course;
+    expect($scope.course.name).toBe("PHP/JavaScript/Drupal");
+  })
+});
+
+describe('StudentsController test', function() {
+  beforeEach(module('courseRoster'));
+
+  var $controller;
+
+  beforeEach(inject(function(_$controller_) {
+    $controller = _$controller_;
+  }));
+
+  it('adds a student using the method .addStudent()', function() {
+    var course = { name: "PHP/JavaScript/Drupal", id: 1, students: [] };
+    var $scope = {};
+    var controller = $controller('StudentsCtrl', { $scope: $scope });
+    $scope.course = course;
+    $scope.studentName = "Ian";
+    $scope.addStudent();
+
+    expect($scope.course.students[0].name).toBe("Ian");
   });
 });

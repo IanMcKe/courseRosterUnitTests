@@ -41,3 +41,21 @@ describe('aGreatEye directive test', function() {
     expect(element.text()).toBe("lidless, wreathed in flame, 2 times");
   });
 });
+
+describe('changeClass Directive test', function() {
+  var element, scope;
+
+  beforeEach(module('courseRoster'));
+
+  beforeEach(inject(function($compile, $rootScope) {
+    element = angular.element("<h1 change-class></h1>");
+    scope = $rootScope.$new();
+    $compile(element)(scope);
+    scope.$digest();
+  }));
+
+  it('changes class when clicked', function() {
+    element.triggerHandler('click');
+    expect(element.hasClass('bg-danger')).toBe(true);
+  });
+});

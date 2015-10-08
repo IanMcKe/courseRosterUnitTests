@@ -4,7 +4,7 @@
 ## Description
 Two controllers ```StudentsController.js``` and ```CoursesController.js``` and two factories ```StudentsFactory.js``` and ```UtilitiesFactory.js``` are created for the project.
 
-##### Before beginning testing be sure to go through the [installation](http://karma-runner.github.io/0.13/intro/installation.html) and then the [configuration](http://karma-runner.github.io/0.13/config/configuration-file.html) of Karma.  I left ```my.conf.js``` in the repo for reference but try deleting it and running karma init to make your own.
+##### Before beginning testing be sure to go through the [installation](http://karma-runner.github.io/0.13/intro/installation.html) and then the [configuration](http://karma-runner.github.io/0.13/intro/configuration.html) of Karma.  I left ```my.conf.js``` in the repo for reference but try deleting it and running karma init to make your own.
 
 A website that allows users to create a course roster by adding courses.  Students can then be added to each course.  Tests have been added for the following:
 
@@ -13,7 +13,7 @@ A website that allows users to create a course roster by adding courses.  Studen
 * CoursesController
 * StudentsController
 
-Karma makes the basic my.conf.js for you when you enter "karma init" in your browser, but you will need to add files to the "files" section of my.conf.js in order for Karma to run properly.  Here's how my files section of my.conf.js looked after I got done:
+Karma makes the basic ```my.conf.js``` for you when you enter "karma init" in your browser, but you will need to add files to the "files" section of my.conf.js in order for Karma to run properly.  Here's how my files section of ```my.conf.js``` looked after I got done:
 
 ![my.conf.js files section](https://github.com/IanMcKe/courseRosterUnitTests/blob/master/my.conf.js_files.JPG)
 
