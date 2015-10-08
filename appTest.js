@@ -1,4 +1,4 @@
-var courseRoster = angular.module('courseRoster', ['ui.router']);
+var courseRoster = angular.module('courseRoster', ['ui.router', 'ngMock']);
 
 courseRoster.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider.state('home', {
