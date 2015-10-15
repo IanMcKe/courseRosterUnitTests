@@ -12,7 +12,6 @@ describe('CoursesFactory test', function() {
   });
 
   it('adds a course using the method .addCourse()', function() {
-    var course = { name: "PHP/JavaScript/Drupal", id: 1, students: [] };
     var $scope = {};
     CoursesFactory.courseName = "PHP/JavaScript/Drupal";
     CoursesFactory.addCourse();

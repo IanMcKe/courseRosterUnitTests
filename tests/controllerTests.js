@@ -2,18 +2,22 @@ describe('CoursesController test', function() {
   beforeEach(module('courseRoster'));
 
   var $controller;
+  var CoursesFactory;
 
-  beforeEach(inject(function(_$controller_) {
+  beforeEach(inject(function(_$controller_, _CoursesFactory_) {
     $controller = _$controller_;
+    CoursesFactory = _CoursesFactory_;
   }));
 
-  it('assigns a course to CoursesController', function() {
-    var course = { name: "PHP/JavaScript/Drupal", id: 1, students: [] };
+  it('can pull a course from CoursesFactory', function() {
     var $scope = {};
     var controller = $controller('CoursesCtrl', { $scope: $scope });
-    $scope.course = course;
-    expect($scope.course.name).toBe("PHP/JavaScript/Drupal");
-  })
+
+    CoursesFactory.courseName = "PHP/JavaScript/Drupal";
+    CoursesFactory.addCourse();
+
+    expect($scope.courses[0].name).toBe("PHP/JavaScript/Drupal");
+  });
 });
 
 describe('StudentsController test', function() {
